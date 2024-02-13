@@ -1,7 +1,7 @@
 
 // Countdown timer code
 document.addEventListener("DOMContentLoaded", function() {
-    const startTime = new Date("2024-02-14T04:00:00+08:00"); // Kuala Lumpur time
+    const startTime = new Date("2024-02-17T10:00:00+08:00"); // Kuala Lumpur time
 
     const startTimeString = startTime.toLocaleTimeString("en-MY", { hour: "numeric", minute: "2-digit" }) + " on " + startTime.toLocaleDateString("en-MY", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
     document.getElementById("starttime-text").textContent = `EBGS will begin at ${startTimeString}.\r\n`;
@@ -63,9 +63,9 @@ const questions = [
     { question: "Complete the sentence from the lyrics of Don Quijote's iconic earworm: \"I'm in paradise, it's a ___!\"", answer: "wonderful place for me" },
     { question: "Proclaimed seven times.", answer: "Merdeka" },
     { question: "(No Googling) What year was the Rukun Negara created?", answer: "1970" },
-    { question: "Those who cannot remember the past are condemned to repeat it.", answer: "Muzium" },
+    { question: "Ben Stiller had a great evening here.", answer: "Muzium" },
     { question: "Few Malaysian artists have created a larger mosaic than him.", answer: "CHEONG LAI THONG" },
-    { question: "Sir Park", answer: "Taman Tun" },
+    { question: "Park Sir Doctor Is Male", answer: "Taman Tun Dr Ismail" },
     { question: "Up the stairs, the secret location behind the storage space.", answer: "Locker & Loft" }
 ];
 
