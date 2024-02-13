@@ -1,1 +1,23 @@
-Hello testing
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="countdown">
+        <div id="countdown-text">00:00:00</div>
+        <div id="starttime-text">Start time is at TIME</div>
+    </div>
+    <div id="quiz-container">
+        <div id="progress"><span id="current-question-number">1</span> / <span id="total-questions"></span></div>
+        <div id="question"></div>
+        <input type="text" id="answer" autocomplete="off" placeholder=". . .">
+        <button onclick="checkAnswer()">SUBMIT</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
