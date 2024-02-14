@@ -1,8 +1,20 @@
 
-// Countdown timer code
 document.addEventListener("DOMContentLoaded", function() {
-    const startTime = new Date("2024-02-17T10:00:00+08:00"); // Kuala Lumpur time
+    const passcode = "432256"; // Set your static 6-digit code here
 
+    document.getElementById('passcode-entry').addEventListener('input', function(e) {
+        if (e.target.value === passcode) {
+            document.getElementById('passcode-container').style.display = 'none';
+        } else if (e.target.value.length == passcode.length) {
+            document.getElementById('passcode-entry').style.color = 'salmon';
+            document.getElementById('passcode-entry').style.textDecoration = 'line-through';
+        } else {
+            document.getElementById('passcode-entry').style.color = 'white';
+            document.getElementById('passcode-entry').style.textDecoration = 'none';
+        }
+    });
+
+    const startTime = new Date("2024-02-17T11:00:00+08:00"); // Kuala Lumpur time
     const startTimeString = startTime.toLocaleTimeString("en-MY", { hour: "numeric", minute: "2-digit" }) + " on " + startTime.toLocaleDateString("en-MY", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
     document.getElementById("starttime-text").textContent = `EBGS will begin at ${startTimeString}.\r\n`;
 
@@ -46,7 +58,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Rest of the quiz code (questions array, checkAnswer function, etc.) remains the same
 const questions = [
-    { question: "boy, girl, joy, joy, silver, gold", answer: "432256" },
     { question: "Cafe 36 + Cafe 52 = ?", answer: "Cafe 88" },
     { question: "The legendary civilization, swallowed by the sea.", answer: "Atlantis" },
     { question: "What do you call the section below the Girdle of an ideal cut diamond?", answer: "Pavilion" },
