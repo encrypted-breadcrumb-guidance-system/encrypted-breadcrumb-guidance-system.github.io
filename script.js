@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    const startTime = new Date("2024-02-17T11:00:00+08:00"); // Kuala Lumpur time
+    const startTime = new Date("2024-02-17T12:00:00+08:00"); // Kuala Lumpur time
     const startTimeString = startTime.toLocaleTimeString("en-MY", { hour: "numeric", minute: "2-digit" }) + " on " + startTime.toLocaleDateString("en-MY", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
     document.getElementById("starttime-text").textContent = `EBGS will begin at ${startTimeString}.\r\n`;
 
